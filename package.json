@@ -13,9 +13,15 @@
     "test": "jest"
   },
   "jest": {
+    "moduleNameMapper": {
+      "^(\\.\\.?/.*)\\.js$": [
+        "$1.ts",
+        "$0"
+      ]
+    },
     "rootDir": "src",
     "transform": {
-      "\\.(js|jsx|ts|tsx)$": "@sucrase/jest-plugin"
+      "\\.ts$": "@sucrase/jest-plugin"
     }
   },
   "repository": {
